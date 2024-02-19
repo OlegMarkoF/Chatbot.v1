@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="/images/icon.png" type="image/x-icon" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/style.css" />
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <article class="article">
+      <div class="logo"><img src="./images/Logo.svg" alt="logo" /></div>
+      <div class="article-buttons">
+        <button class="article-button button-active">
+          <img
+            class="button-img message img-active"
+            src="./images/symbols-chat.svg"
+            alt="иконка сообщения"
+          />
+          Сегодняшние сообщения
+          <span class="message-count">15</span>
+        </button>
+        <button class="article-button">
+          <img
+            class="button-img calendar"
+            src="./images/calendar-line.svg"
+            alt="иконка сообщения"
+          />Плановые сообщения
+          <span class="message-count">35</span>
+        </button>
+      </div>
+    </article>
+    <main class="main">
+      <section class="main-content">
+        <div><h2 class="date-message">08/02/2024</h2></div>
+        <div class="message-content"></div>
+        <section class="audio">
+          <!-- <audio controls>
+              <source src="./images/audio/" type="audio/mpeg" />
+            </audio> -->
+        </section>
+  
+        <section class="button-group">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+        </section>
+
+      </section>
+      
+
+      <!-- Popup -->
+      <section class="popup">
+        <div class="popup__container">
+          <button class="popup__close popup__close_edit" type="button"></button>
+          <h2 class="popup__title">Запланировать звонок</h2>
+          <p class="popup__subtitle">Выберите интересующую вас дату</p>
+          <form
+            class="popup__content popup__content_type_date"
+            name="form"
+            novalidate
+          >
+            <input
+              class="popup__field popup__field_type_date"
+              id="date"
+              name="date"
+              type="date"
+              value=""
+              placeholder=""
+              required
+            />
+            <span id="date-error" class="popup__date-error"></span>
+            <button
+              class="popup__button-save popup__button-save_change"
+              name="button_date"
+              type="submit"
+            >
+              Запланировать
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Hamburger menu -->
+      <section class="hamburger" asinc>
+        <div class="hamburger__box">
+          <button class="hamburger-menu hamburger__close-menu"></button>
+          <nav class="hamburger__button__group">
+            <a class="service-button" href="#tickets">Купить билет</a>
+            <a class="service-button" href="#calendar">Афиша</a>
+            <a class="service-button" href="#gallery">Галерея</a>
+            <a class="service-button" href="#rewiews">Отзывы</a>
+            <a class="service-button" href="#">Подробности</a>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/humburger.js"></script>
+    <script src="./scripts/popup.js"></script>
+  </body>
+</html>
