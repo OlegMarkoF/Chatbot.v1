@@ -48,8 +48,16 @@
     justify-content: space-around;
     text-align: start;
     border-radius: 8px;
+    cursor: pointer;
     outline: none;
     border: none;
+    /* mask-image: url(../../images/symbols-chat-black.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%; */
+}
+
+.article-button:hover {
+    outline: 1px solid #C5C7D0;
 }
 
 .article-button img {
@@ -66,4 +74,7 @@
 .button-active {
     background-color: #323338;
     color: #fff;
+    /* mask-image: url(../../images/symbols-chat.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100%; */
 }

@@ -7,7 +7,7 @@ body {
   flex-direction: row;
   max-width: 1280px;
   /* position: relative; */
-  font-family: 'Arial', 'Inter', sans-serif;
+  font-family: 'GolosText', 'Arial', 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;

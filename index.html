@@ -33,26 +33,45 @@
     <main class="main">
       <section class="main-content">
         <div><h2 class="date-message">08/02/2024</h2></div>
-        <div class="message-content"></div>
-        <section class="audio">
-          <!-- <audio controls>
-              <source src="./images/audio/" type="audio/mpeg" />
-            </audio> -->
+        <section class="message-content">
+          <p class="message-text">
+            Date: 08/02/2024 Deal_ID: 12345678 Call_ID: 12345678 Farmer_ID:
+            12345678 (Иван Иванов) Crop_ID: 123 (Подсолнечник) Storage_ID: 123
+          </p>
+          <p class="message-text">
+            Робот: Алло.
+            <span>Фермер:</span> Алло. Робот: Здравствуйте, это Сергей из Олсан.
+            Мы закупаем подсолнечник у себя на воротах. Удобно сейчас?
+            <span>Фермер:</span> Что подсолнечник? Робот: Мы предлагаем у нас на
+            воротах. Без НДС 25,6 рублей за килограмм, а с НДС это 28,2. Будете
+            продавать? <span>Фермер:</span> У меня не на чем доставлять его.
+            Робот: Хорошо, давайте попробую согласовать вам индивидуальную цену.
+            <span>Фермер:</span> Ну хорошо, согласовывайте. Робот: Тогда вернусь
+            позже с расчетом. До связи. Результат: готов обсуждать продажу по
+            данной или другой цене - нужно рассчитать индивидуальную цену
+          </p>
         </section>
-  
-        <section class="button-group">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
+        <section class="audio">
+          <audio class="audiotrack" controls>
+            <source
+              src="./audio/pain-shut-your-mouth-live.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
         </section>
 
+        <section class="button-group">
+          <button class="product-btn">Запланировать звонок</button>
+          <button class="product-btn">Звонок роботом</button>
+          <button class="product-btn active-btn">Звонок</button>
+          <button class="product-btn">Товар продан</button>
+          <button class="product-btn">Внести товар</button>
+          <button class="product-btn">Отбор пробы</button>
+          <button class="product-btn">Встречное предложение</button>
+          <button class="product-btn">Фильтр по культурам</button>
+          <button class="product-btn">Анализ</button>
+        </section>
       </section>
-      
 
       <!-- Popup -->
       <section class="popup">

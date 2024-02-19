@@ -12,19 +12,17 @@ for (let i = 0; i < button.length; i++) {
   button[i].addEventListener('click', buttonActive)
 }
 
-// получаем список иконок
-// const btnImg = document.querySelectorAll('.button-img');
-// const btnImgList = Array.from(btnImg);
 
-// for (let i = 0; i < button.length; i++) {
-//   button[i].addEventListener('click', function () {
-//     const current = document.getElementsByClassName('button-active');
-//     current[0].className = current[0].className.replace(' button-active', '');
-//     this.className += ' button-active';
-//     const message = document.querySelector('.message');
-//     if (message.classList.contains('message') && parentElement.classList.contains('button-active')) {
-//       message.src = "../../images/symbols-chat-black.svg";
-//     }
-    
-//   })
-// }
+/// получаем список кнопок товара
+const productButtons = document.querySelector('.button-group');
+const productButton = Array.from(productButtons.children);
+
+function productButtonActive () {
+  const current = document.getElementsByClassName('active-btn');
+  current[0].className = current[0].className.replace(' active-btn', '');
+  this.className += ' active-btn';
+}
+
+for (let i = 0; i < productButton.length; i++) {
+  productButton[i].addEventListener('click', productButtonActive)
+}
