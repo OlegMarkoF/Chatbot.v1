@@ -33,8 +33,8 @@
     <main class="main">
       <section class="main-content">
         <div><h2 class="date-message">08/02/2024</h2></div>
-        <section class="message-content">
-          <p class="message-text">
+        <div class="message-content">
+          <p class="message-info">
             Date: 08/02/2024 Deal_ID: 12345678 Call_ID: 12345678 Farmer_ID:
             12345678 (Иван Иванов) Crop_ID: 123 (Подсолнечник) Storage_ID: 123
           </p>
@@ -50,17 +50,17 @@
             позже с расчетом. До связи. Результат: готов обсуждать продажу по
             данной или другой цене - нужно рассчитать индивидуальную цену
           </p>
-        </section>
-        <section class="audio">
+        </div>
+        <div class="audio">
           <audio class="audiotrack" controls>
             <source
               src="./audio/pain-shut-your-mouth-live.mp3"
               type="audio/mpeg"
             />
           </audio>
-        </section>
+        </div>
 
-        <section class="button-group">
+        <div class="button-group">
           <button class="product-btn">Запланировать звонок</button>
           <button class="product-btn">Звонок роботом</button>
           <button class="product-btn active-btn">Звонок</button>
@@ -70,7 +70,14 @@
           <button class="product-btn">Встречное предложение</button>
           <button class="product-btn">Фильтр по культурам</button>
           <button class="product-btn">Анализ</button>
-        </section>
+        </div>
+        <nav class="navigate">
+          <button class="navigate-btn">Назад</button>
+          <button class="navigate-btn">Сохранить</button>
+          <button class="navigate-btn send-btn">Отправить всю информацию в WhatsApp</button>
+          <button class="navigate-btn">Вперед</button>
+        </nav>
+
       </section>
 
       <!-- Popup -->

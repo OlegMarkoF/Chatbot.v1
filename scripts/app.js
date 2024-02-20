@@ -12,8 +12,7 @@ for (let i = 0; i < button.length; i++) {
   button[i].addEventListener('click', buttonActive)
 }
 
-
-/// получаем список кнопок товара
+// получаем список кнопок товара
 const productButtons = document.querySelector('.button-group');
 const productButton = Array.from(productButtons.children);
 
@@ -26,3 +25,9 @@ function productButtonActive () {
 for (let i = 0; i < productButton.length; i++) {
   productButton[i].addEventListener('click', productButtonActive)
 }
+
+const arr = [
+  'apple', 'banana', 'orange'
+];
+const html = arr.map((item) => `<div>${item}</div>`).join('');
+document.querySelector('.message-info').innerHTML = html;
