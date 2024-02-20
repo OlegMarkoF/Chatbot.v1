@@ -1,9 +1,9 @@
 .main-content {
   border-radius: 16px;
-  margin: 30px;
-  padding: 0 25px;
+  margin: 30px 30px 0;
+  padding: 0 25px 30px;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,7 @@
 }
 
 .message-content {
+  width: 100%;
   background-color: #f5f6f8;
   border-radius: 16px;
   display: flex;
@@ -22,7 +23,11 @@
 }
 
 
-.message-text, .message-info {
+.message-text, 
+.message-info,
+.message-result,
+.message-total {
+  width: 100%;
   padding: 16px 10px;
   border: 1px solid #e6e9ef;
   background-color: #e6e9ef;

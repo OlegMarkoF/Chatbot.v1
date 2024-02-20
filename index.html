@@ -34,22 +34,8 @@
       <section class="main-content">
         <div><h2 class="date-message">08/02/2024</h2></div>
         <div class="message-content">
-          <p class="message-info">
-            Date: 08/02/2024 Deal_ID: 12345678 Call_ID: 12345678 Farmer_ID:
-            12345678 (Иван Иванов) Crop_ID: 123 (Подсолнечник) Storage_ID: 123
-          </p>
-          <p class="message-text">
-            Робот: Алло.
-            <span>Фермер:</span> Алло. Робот: Здравствуйте, это Сергей из Олсан.
-            Мы закупаем подсолнечник у себя на воротах. Удобно сейчас?
-            <span>Фермер:</span> Что подсолнечник? Робот: Мы предлагаем у нас на
-            воротах. Без НДС 25,6 рублей за килограмм, а с НДС это 28,2. Будете
-            продавать? <span>Фермер:</span> У меня не на чем доставлять его.
-            Робот: Хорошо, давайте попробую согласовать вам индивидуальную цену.
-            <span>Фермер:</span> Ну хорошо, согласовывайте. Робот: Тогда вернусь
-            позже с расчетом. До связи. Результат: готов обсуждать продажу по
-            данной или другой цене - нужно рассчитать индивидуальную цену
-          </p>
+          <p class="message-info"></p>
+          <p class="message-text"></p>
         </div>
         <div class="audio">
           <audio class="audiotrack" controls>
@@ -59,7 +45,8 @@
             />
           </audio>
         </div>
-
+        <p class="message-result"></p>
+        <p class="message-total"></p>
         <div class="button-group">
           <button class="product-btn">Запланировать звонок</button>
           <button class="product-btn">Звонок роботом</button>
@@ -73,11 +60,14 @@
         </div>
         <nav class="navigate">
           <button class="navigate-btn">Назад</button>
-          <button class="navigate-btn">Сохранить</button>
-          <button class="navigate-btn send-btn">Отправить всю информацию в WhatsApp</button>
+          <div>
+            <button class="navigate-btn">Сохранить</button>
+            <button class="navigate-btn send-btn">
+              Отправить всю информацию в WhatsApp
+            </button>
+          </div>
           <button class="navigate-btn">Вперед</button>
         </nav>
-
       </section>
 
       <!-- Popup -->
