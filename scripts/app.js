@@ -28,6 +28,13 @@ for (let i = 0; i < productButton.length; i++) {
 
 const arr = [
   'apple', 'banana', 'orange'
+  
 ];
 const html = arr.map((item) => `<div>${item}</div>`).join('');
 document.querySelector('.message-info').innerHTML = html;
+
+// const arr = [
+//   'apple', 'banana', 'orange'
+// ];
+// const html = arr.map((item) => `<div>${item}</div>`).join('');
+// document.querySelector('.message-info').innerHTML = html;
