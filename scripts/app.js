@@ -1,3 +1,7 @@
+let currentDate = new Date();
+const dateMessage = document.querySelector(".date-message");
+dateMessage.innerHTML = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+currentDate.getFullYear();
+
 // получаем список кнопок
 const buttons = document.querySelector(".article-buttons");
 const button = Array.from(buttons.children);

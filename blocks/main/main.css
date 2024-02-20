@@ -1,6 +1,6 @@
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   display: flex;
@@ -32,7 +32,7 @@ body {
 }
 
 p, i {
-  font-family: 'Arial';
+  font-family: 'GolosText', 'Arial';
   margin: 0;
   padding: 0;
   /* font-weight: bold;
@@ -55,8 +55,6 @@ h1, h2, h3 {
   /* font-family: 'Bebas Neue', 'Arial'; */
   margin: 0;
   padding: 0;
-  color: black;
   text-align: center;
-  text-transform: uppercase;
 }
 

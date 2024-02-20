@@ -1,35 +1,30 @@
-class Popup {
-  constructor (popupSelector) {
-    this._popupSelector = popupSelector;
-    this._popup = document.querySelector(this._popupSelector);
-    this._handleEscape = (evt) => this._handleEscClose(evt);
-  }
+// Открытие/закрытие popup
+const popup = document.querySelector(".popup");
+const openPopupButton = document.querySelector("#scheduleCall");
+const closePopupButton = document.querySelector(".popup__close");
+const clickPopupButton = document.getElementsByClassName("service-button");
 
-  // Oткрытиe попап
-  open() {
-    this._popup.classList.add('popup_opened');
-    document.addEventListener('keyup', this._handleEscape);
-  }
-  
-  // Закрытиe попап
-  close() {
-    this._popup.classList.remove('popup_opened');
-    document.removeEventListener('keyup', this._handleEscape);
-  }
+const openPopup = () => {
+  popup.classList.add("popup_opened");
+};
 
-  // Закрытиe попап по Esc
-  _handleEscClose(evt) {
-    if (evt.key === 'Escape') {
-      this.close();
-    }
-  }
+const closePopup = () => {
+  popup.classList.remove("popup_opened");
+};
 
-  setEventListeners() {
-    this._popup.addEventListener('mousedown', (evt) => {
-      if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__close')) {
-        this.close();
-      }
-    });
-  }
-
+function closePopupWhen(evt) {
+  if (evt.key === "Escape" || evt.key === "click" || evt.target === evt.currentTarget) {
+    closePopup();
+  } 
 }
+
+// let n;
+// for (n = 0; n < clickPopupButton.length; n++) {
+//   clickPopupButton[n].addEventListener("click", closePopup);
+// }
+
+// Здесь лежат вызовы функций
+openPopupButton.addEventListener("click", openPopup);
+closePopupButton.addEventListener("click", closePopup);
+popup.addEventListener("click", closePopupWhen);
+window.addEventListener("keyup", closePopupWhen);

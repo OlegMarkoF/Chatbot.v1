@@ -32,7 +32,7 @@
     </article>
     <main class="main">
       <section class="main-content">
-        <div><h2 class="date-message">08/02/2024</h2></div>
+        <div><h2 class="date-message"></h2></div>
         <div class="message-content">
           <p class="message-info"></p>
           <p class="message-text"></p>
@@ -48,7 +48,9 @@
         <p class="message-result"></p>
         <p class="message-total"></p>
         <div class="button-group">
-          <button class="product-btn">Запланировать звонок</button>
+          <button class="product-btn" id="scheduleCall">
+            Запланировать звонок
+          </button>
           <button class="product-btn">Звонок роботом</button>
           <button class="product-btn active-btn">Звонок</button>
           <button class="product-btn">Товар продан</button>
@@ -59,30 +61,30 @@
           <button class="product-btn">Анализ</button>
         </div>
         <nav class="navigate">
-          <button class="navigate-btn">Назад</button>
+          <button class="navigate-btn" id="btnPrev">Назад</button>
           <div>
             <button class="navigate-btn">Сохранить</button>
             <button class="navigate-btn send-btn">
               Отправить всю информацию в WhatsApp
             </button>
           </div>
-          <button class="navigate-btn">Вперед</button>
+          <button class="navigate-btn" id="btnNext">Вперед</button>
         </nav>
       </section>
 
       <!-- Popup -->
       <section class="popup">
         <div class="popup__container">
-          <button class="popup__close popup__close_edit" type="button"></button>
+          <button class="popup__close" type="button"></button>
           <h2 class="popup__title">Запланировать звонок</h2>
           <p class="popup__subtitle">Выберите интересующую вас дату</p>
           <form
-            class="popup__content popup__content_type_date"
+            class="popup__content"
             name="form"
             novalidate
           >
             <input
-              class="popup__field popup__field_type_date"
+              class="popup__field"
               id="date"
               name="date"
               type="date"
@@ -92,9 +94,10 @@
             />
             <span id="date-error" class="popup__date-error"></span>
             <button
-              class="popup__button-save popup__button-save_change"
+              class="popup__button-save "
               name="button_date"
               type="submit"
+              style="width: 50%; position: absolute; bottom: 0; margin-bottom: 35px;"
             >
               Запланировать
             </button>
@@ -119,5 +122,6 @@
     <script src="./scripts/app.js"></script>
     <script src="./scripts/humburger.js"></script>
     <script src="./scripts/popup.js"></script>
+    <script src="./scripts/navigate.js"></script>
   </body>
 </html>

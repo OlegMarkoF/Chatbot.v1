@@ -100,7 +100,7 @@
   justify-content: space-between;
 }
 
-.navigate-btn {
+.navigate-btn, .popup__button-save {
   padding: 14px 18px;
   border: none;
   background-color: #ffde5f;
