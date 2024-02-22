@@ -1,3 +1,4 @@
+// Тест!! Добавляем дату сообщения
 let currentDate = new Date();
 const dateMessage = document.querySelector(".date-message");
 dateMessage.innerHTML = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+currentDate.getFullYear();
@@ -5,9 +6,24 @@ dateMessage.innerHTML = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'
 const datesOfMessage = document.querySelectorAll(".date-of-message");
 const dateOfMessage = Array.from(datesOfMessage);
 dateOfMessage.innerHTML = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+currentDate.getFullYear();
-console.log(dateOfMessage)
 
-// получаем список кнопок
+// аккордион (выпадающие кнопки фильтра по культурам)
+let acc = document.getElementsByClassName("accordion");
+// let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+// получаем список кнопок (сделать активными несколько кнопок)
 const buttons = document.querySelector(".article-buttons");
 const button = Array.from(buttons.children);
 
