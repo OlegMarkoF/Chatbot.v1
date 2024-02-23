@@ -9,7 +9,6 @@ dateOfMessage.innerHTML = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'
 
 // аккордион (выпадающие кнопки фильтра по культурам)
 let acc = document.getElementsByClassName("accordion");
-// let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
@@ -43,8 +42,9 @@ const productButton = Array.from(productButtons.children);
 
 function productButtonActive() {
   const current = document.getElementsByClassName("active-btn");
-  current[0].className = current[0].className.replace(" active-btn", "");
-  this.className += " active-btn";
+  this.classList.toggle("active-btn");
+  // current[0].className = current[0].className.replace(" active-btn", "");
+  // this.className += " active-btn";
 }
 
 for (let i = 0; i < productButton.length; i++) {

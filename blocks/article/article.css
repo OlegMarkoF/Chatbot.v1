@@ -65,10 +65,10 @@
 }
 
 .message-count {
-    min-width: 20px;
-    height: 18px;
+    padding: 3px;
     background-color: #E6E9EF;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid #c5c7d0;
 }
 
 .button-active {
