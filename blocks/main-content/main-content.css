@@ -3,7 +3,7 @@
   margin: 30px 30px 0;
   padding: 0 25px 30px;
   /* width: 100%; */
-  /* height: 100vh; */
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,11 +12,12 @@
   border: 1px solid #e6e9ef;
   box-sizing: border-box;
   overflow-y: auto;
-  gap: 40px;
+  gap: 20px;
 }
 
 .text-block {
   margin: 20px 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +70,10 @@
   color: #323338;
 }
 
+.navigation-buttons {
+  width: 100%;
+}
+
 .button-group {
   display: flex;
   gap: 10px;
@@ -103,7 +108,7 @@ button:hover, a:hover {
 
 .navigate {
   margin: 0;
-  margin-top: 100px;
+  margin-top: 80px;
   width: 100%;
   display: flex;  
   flex-direction: row;

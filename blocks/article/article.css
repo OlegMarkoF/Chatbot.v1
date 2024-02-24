@@ -66,7 +66,7 @@
 
 .message-count {
     padding: 3px;
-    background-color: #E6E9EF;
+    /* background-color: #E6E9EF; */
     border-radius: 5px;
     border: 1px solid #c5c7d0;
 }
@@ -79,7 +79,7 @@
     mask-size: 100%; */
 }
 
-.accordion {
+/* .accordion {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,15 +95,15 @@
     border-radius: 10px;
     line-height: 20px;
     letter-spacing: 0.02em;
-  }
-  .accordion::after {
+  } */
+  /* .accordion::after {
     content: '▼';
     float: right;
    }
    
    .active::after {
     content: '▲';
-  }
+  } */
   
   .accordion__block {
     width: 100%;
@@ -114,9 +114,9 @@
     gap: 5px;
   }
   
-  .accordion:hover {
+  /* .accordion:hover {
     background-color: #ccc;
-  }
+  } */
 
   .panel {
     display: none;
