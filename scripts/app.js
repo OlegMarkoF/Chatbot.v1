@@ -99,7 +99,9 @@ const productButton = Array.from(productButtons.children);
 
 function productButtonActive() {
   const current = document.getElementsByClassName("active-btn");
-  this.classList.toggle("active-btn");
+      this.classList.toggle("active-btn");
+    
+  
   // current[0].className = current[0].className.replace(" active-btn", "");
   // this.className += " active-btn";
 }

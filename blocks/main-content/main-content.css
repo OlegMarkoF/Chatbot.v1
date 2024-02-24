@@ -82,7 +82,8 @@
   justify-content: center;
 }
 
-.product-btn {
+.product-btn,
+#scheduleCall {
   padding: 14px 18px;
   border: 1px solid #c5c7d0;
   background-color: #e6e9ef;
@@ -94,6 +95,7 @@
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  outline: none;
 }
 
 button:hover, a:hover {
