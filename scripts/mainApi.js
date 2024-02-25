@@ -1,29 +1,29 @@
 const key = process.env.KEY;
 const url = "http://172.201.225.48:5001/fresh";
 
-function getMessages() {
-  fetch(url, {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json"
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw new Error("Ошибка запроса к серверу");
-    })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
+// function getMessages() {
+//   fetch(url, {
+//     method: "GET",
+//     headers: {
+//       Authorization: `Bearer ${key}`,
+//       "Content-Type": "application/json"
+//     },
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         return response.json();
+//       }
+//       throw new Error("Ошибка запроса к серверу");
+//     })
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// }
 
-getMessages()
+// getMessages()
 
 // const arrInfoObj =[{
 //   Date: new Date (2024, 2, 8),
