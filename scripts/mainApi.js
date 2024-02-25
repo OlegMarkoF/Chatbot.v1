@@ -1,4 +1,4 @@
-const key = process.env.KEY;
+// const key = process.env.KEY;
 const url = "http://172.201.225.48:5001/fresh";
 
 // function getMessages() {
