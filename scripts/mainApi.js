@@ -1,4 +1,4 @@
-const key = "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";
+const key = "";
 const url = "http://172.201.225.48:5001/fresh";
 
 function getMessages() {
