@@ -38,7 +38,8 @@
 .message-text, 
 .message-info,
 .message-result,
-.message-total {
+.message-total,
+.message-additional {
   width: 100%;
   padding: 16px 100px 16px 10px;
   border: 1px solid #e6e9ef;

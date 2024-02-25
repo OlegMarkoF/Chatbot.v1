@@ -32,16 +32,16 @@
             <span class="message-count">15</span>
           </button>
           <div class="panel">
-            <button >Картофель</button>
-            <button >Пшеница</button>
-            <button >Лён</button>
-            <button >Рожь</button>
-            <button >Подсолнечник</button>
-            <button >Ячмень</button>
-            <button >Овёс</button>
-            <button >Просо</button>
-            <button >Кукуруза</button>
-            <button >Гречиха</button>
+            <button>Картофель</button>
+            <button>Пшеница</button>
+            <button>Лён</button>
+            <button>Рожь</button>
+            <button>Подсолнечник</button>
+            <button>Ячмень</button>
+            <button>Овёс</button>
+            <button>Просо</button>
+            <button>Кукуруза</button>
+            <button>Гречиха</button>
           </div>
         </div>
 
@@ -54,26 +54,29 @@
           <span class="message-count">35</span>
         </button>
       </div>
-
-      
-
     </article>
     <main class="main">
       <section class="main-content">
-        <div class="text-block">
+        <div class="text-block" id="myDiv">
           <div><h2 class="date-message"></h2></div>
           <div class="message-content">
-            <div class="message-content-box">
+            <div class="message-content-box" id="myInfoDiv">
               <p class="message-info" type="text"></p>
               <p class="date-of-message"></p>
-              <button class="message-content-btn">
+              <button
+                class="message-content-btn"
+                onclick="sendInfoToWhatsApp()"
+              >
                 <img src="./images/wp.svg" alt="whatsapp" />
               </button>
             </div>
-            <div class="message-content-box">
+            <div class="message-content-box" id="myTextDiv">
               <p class="message-text" type="text"></p>
               <p class="date-of-message"></p>
-              <button class="message-content-btn">
+              <button
+                class="message-content-btn"
+                onclick="sendTextToWhatsApp()"
+              >
                 <img src="./images/wp.svg" alt="whatsapp" />
               </button>
             </div>
@@ -86,36 +89,54 @@
               />
             </audio>
           </div>
-          <p class="message-result"></p>
-          <p class="message-total"></p>
+          <div class="message-result">
+            <p ></p>
+            <button class="message-content-btn" onclick="">
+              <img src="./images/wp.svg" alt="whatsapp" />
+            </button>
+          </div>
+          <div class="message-total">
+            <p ></p>
+            <button class="message-content-btn" onclick="">
+              <img src="./images/wp.svg" alt="whatsapp" />
+            </button>
+          </div>
+          <div class="message-additional">
+            <p ></p>
+            <button class="message-content-btn" onclick="">
+              <img src="./images/wp.svg" alt="whatsapp" />
+            </button>
+          </div>
         </div>
 
         <div class="navigation-buttons">
           <div class="button-group">
-            <button class="product-btn" id="scheduleCall">
-              Запланировать звонок
-            </button>
+            <button id="scheduleCall">Запланировать звонок</button>
             <button class="product-btn">Звонок роботом</button>
             <button class="product-btn active-btn">Звонок</button>
             <button class="product-btn">Товар продан</button>
             <button class="product-btn">Внести товар</button>
             <button class="product-btn">Отбор пробы</button>
             <button class="product-btn">Встречное предложение</button>
-            <button class="product-btn">Фильтр по культурам</button>
             <button class="product-btn">Анализ</button>
           </div>
           <nav class="navigate">
-            <button class="navigate-btn" id="btnPrev">Назад<span class="message-count">38</span></button>
+            <button class="navigate-btn" id="btnPrev">
+              Назад<span class="message-count">38</span>
+            </button>
             <div>
               <button class="navigate-btn">Сохранить</button>
-              <button class="navigate-btn send-btn">
+              <button class="navigate-btn send-btn" onclick="sendToWhatsApp()">
                 Отправить всю информацию в WhatsApp
               </button>
             </div>
-            <button class="navigate-btn" id="btnNext">Вперед<span class="message-count">20</span></button>
+            <button class="navigate-btn" id="btnNext">
+              Вперед<span class="message-count">20</span>
+            </button>
           </nav>
         </div>
       </section>
+
       <!-- Popup -->
       <section class="popup">
         <div class="popup__container">
@@ -149,23 +170,9 @@
           </form>
         </div>
       </section>
-
-      <!-- Hamburger menu -->
-      <section class="hamburger" asinc>
-        <div class="hamburger__box">
-          <button class="hamburger-menu hamburger__close-menu"></button>
-          <nav class="hamburger__button__group">
-            <a class="service-button" href="#tickets">Купить билет</a>
-            <a class="service-button" href="#calendar">Афиша</a>
-            <a class="service-button" href="#gallery">Галерея</a>
-            <a class="service-button" href="#rewiews">Отзывы</a>
-            <a class="service-button" href="#">Подробности</a>
-          </nav>
-        </div>
-      </section>
     </main>
     <script src="./scripts/app.js"></script>
-    <script src="./scripts/humburger.js"></script>
+    <script src="./scripts/mainApi.js"></script>
     <script src="./scripts/popup.js"></script>
     <!-- <script src="./scripts/navigate.js"></script> -->
   </body>
