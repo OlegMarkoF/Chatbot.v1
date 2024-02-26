@@ -1,62 +1,57 @@
-// const key = process.env.KEY;
-const url = "http://172.201.225.48:5001/fresh";
+const url = "http://172.201.225.48:5003/fresh";
 
-// function getMessages() {
-//   fetch(url, {
-//     method: "GET",
-//     headers: {
-//       Authorization: `Bearer ${key}`,
-//       "Content-Type": "application/json"
-//     },
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         return response.json();
-//       }
-//       throw new Error("Ошибка запроса к серверу");
-//     })
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
-// }
+function getMessages() {
+  fetch(url + "/13427", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error("Ошибка запроса к серверу");
+    })
+    .then((data) => {
+      console.log(data.records);
 
-// getMessages()
+      let culturesList = [];
+      const response = data.records;
+      response.forEach((item) => {
+        console.log(item.culture);
+        if (
+          culturesList.length == 0 ||
+          culturesList.includes(item.culture) == false
+        ) {
+          culturesList.push(item.culture);
+        }
+      });
+      
+      culturesList.forEach((item) => {
+        console.log(item);
+        document.getElementById(
+          "cultures"
+        ).innerHTML = `<button class="article-button">
+        ${item}
+      </button>`;
+      });
 
-// const arrInfoObj =[{
-//   Date: new Date (2024, 2, 8),
-//   Deal_ID: 12345678,
-//   Call_ID: 12345678,
-//   Farmer_ID: 12345678 /*("Иван Иванов")*/,
-//   Crop_ID: 123 /*("Подсолнечник")*/,
-//   Storage_ID: 123,
-// }, ];
+      const text = data.records[0].text;
+      document.querySelector(".message-text").innerHTML = text;
 
-// const arrTextObj = [
-//   {
-//     Робот: "Алло.",
-//     Фермер: "Алло.",
-//     Робот:
-//       "Здравствуйте, это Сергей из Олсан. Мы закупаем подсолнечник у себя на воротах. Удобно сейчас?",
-//     Фермер: "Что подсолнечник?",
-//     Робот:
-//       "Мы предлагаем у нас на воротах. Без НДС 25,6 рублей за килограмм, а с НДС это 28,2. Будетепродавать?",
-//     Фермер: "У меня не на чем доставлять его.",
-//     Робот: "Хорошо, давайте попробую согласовать вам индивидуальную цену.",
-//     Фермер: "Ну хорошо, согласовывайте.",
-//     Робот: "Тогда вернусьпозже с расчетом. До связи.",
-//   },
-// ];
+      // const text = arrText.map((item) => `<p>${item}</p>`).join("");
 
-// const info = arrTextObj.map(
-//   (item) =>
-//     `<p class="message-text">Робот: ${item.Робот}</p>
-// <p class="message-text">Фермер: ${item.Фермер}</p>
-// `
-// );
-// document.querySelector(".message-content-box").innerHTML = info;
+      const rec = data.records[0].additional;
+      document.querySelector(".message-additional").innerHTML = rec;
+    })
+    .catch((error) => {
+      // console.log(error);
+    });
+}
+
+getMessages();
+
 
 // async function serverGetmessage() {
 //   let res = await fetch(SERVER_URL + '/deal_id', {
@@ -70,11 +65,6 @@ const url = "http://172.201.225.48:5001/fresh";
 // }
 
 // console.log(serverGetmessage())
-
-// return fetch(SERVER_URL, {
-//   method: "GET",
-//   headers: { "Content-Type": "application/json" },
-// });
 
 // function res(id) {
 //   const req = new XMLHttpRequest();
@@ -110,8 +100,8 @@ const arrText = [
   "Фермер: Ну хорошо, согласовывайте. Робот: Тогда вернусьпозже с расчетом. До связи.",
 ];
 
-const text = arrText.map((item) => `<p>${item}</p>`).join("");
-document.querySelector(".message-text").innerHTML = text;
+// const text = arrText.map((item) => `<p>${item}</p>`).join("");
+// document.querySelector(".message-text").innerHTML = text;
 
 const arrResult = [
   "Результат: готов обсуждать продажу по данной или другой цене - нужно рассчитать индивидуальную цену",
@@ -122,8 +112,3 @@ document.querySelector(".message-result").innerHTML = result;
 const arrTotal = ["Рекомендация: звонок, встречное предложение"];
 const total = arrTotal.map((item) => `<p>${item}</p>`).join("");
 document.querySelector(".message-total").innerHTML = total;
-
-
-const addtionalRec = ["Блок дополнительных рекомендаций"];
-const rec = addtionalRec.map((item) => `<p>${item}</p>`).join("");
-document.querySelector(".message-additional").innerHTML = rec;

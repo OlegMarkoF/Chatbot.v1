@@ -152,8 +152,8 @@ button:hover, a:hover {
 .message-content-btn {
   margin: 0;
   padding: 0;
-  width: 50px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   right: 20px;
   top: calc(50% - 20px);
@@ -161,8 +161,12 @@ button:hover, a:hover {
   outline: none;
   border-radius: 50%;
   cursor: pointer;
+  background: none;
 }
 
+.message-content-btn img {
+ width: 100%;
+}
 
 .date-of-message {
   margin: 0;

@@ -21,8 +21,7 @@
           <span class="message-count">15</span>
         </button> -->
 
-        <div class="accordion__block">
-          <button class="article-button accordion button-active">
+          <button class="article-button button-active">
             <img
               class="button-img message img-active"
               src="./images/symbols-chat.svg"
@@ -31,28 +30,19 @@
             Сегодняшние транскрибации
             <span class="message-count">15</span>
           </button>
-          <div class="panel">
-            <button>Картофель</button>
-            <button>Пшеница</button>
-            <button>Лён</button>
-            <button>Рожь</button>
-            <button>Подсолнечник</button>
-            <button>Ячмень</button>
-            <button>Овёс</button>
-            <button>Просо</button>
-            <button>Кукуруза</button>
-            <button>Гречиха</button>
-          </div>
+          <button class="article-button">
+            <img
+              class="button-img calendar"
+              src="./images/calendar-line.svg"
+              alt="иконка сообщения"
+            />Плановые транскрибации
+            <span class="message-count">35</span>
+          </button>
+          <div class="cultures" id="cultures"></div>
+            
         </div>
 
-        <button class="article-button">
-          <img
-            class="button-img calendar"
-            src="./images/calendar-line.svg"
-            alt="иконка сообщения"
-          />Плановые транскрибации
-          <span class="message-count">35</span>
-        </button>
+        
       </div>
     </article>
     <main class="main">
@@ -125,7 +115,6 @@
               Назад<span class="message-count">38</span>
             </button>
             <div>
-              <button class="navigate-btn">Сохранить</button>
               <button class="navigate-btn send-btn" onclick="sendToWhatsApp()">
                 Отправить всю информацию в WhatsApp
               </button>
